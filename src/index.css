@@ -1,0 +1,94 @@
+.tab {
+  display: inline-block;
+  padding: 2px 5px;
+  margin: 5px 5px 0px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.toolbar {
+  background-color: lightgray;
+  padding: 7px;
+  border-bottom: 2px solid gray;
+  border-radius: 5px 5px 0px 0px;
+}
+
+
+.general_display {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+}
+.num_block {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row: 1/3;
+}
+.moveCursor_block {
+  display: inline-grid;
+  grid-template-columns: 2fr 1fr 2fr;
+}
+.control_block, .basicOperation_block, .parentheses_block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.alphabet_display {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+
+.greekLetters_display {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+
+.formatting_display {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 5px;
+}
+.textStyle_block, .alignment_block, .textStyle2_block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.supersubscript_button, .leftSupersubscript_button, .font_selection {
+  grid-column: 1/3;
+}
+.color_picker {
+  height: auto;
+  width: auto;
+}
+
+
+.toolbar_button, .toolbar_selection {
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+
+.preview_container {
+  border-top: 2px solid darkgray;
+  background-color: lightgray;
+  border-radius: 0px 0px 5px 5px;
+  padding: 10px;
+}
+.preview {
+  background-color: white;
+  border: 1px solid darkgray;
+  padding: 5px;
+}
+
+
+
+
+.output {
+  margin-top: 20px;
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 7px;
+}
