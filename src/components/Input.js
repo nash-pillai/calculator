@@ -1,9 +1,10 @@
 import React from 'react';
+import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft';
 import '../index.css';
 
 import Menu from "./Menu";
-import Toolbar from "./Toolbar";
-import Preview from "./Preview";
+import Toolbar from "./input/Toolbar";
+import Preview from "./input/Preview";
 
 // ========================================
 
@@ -18,9 +19,6 @@ class Input extends React.Component {
     }
   }
   render() {
-    var changeTab = (newTab) => {
-      this.setState(prevState => ({selectedTab: newTab}));
-    }
     var changeFont = (newFont) => {
       this.setState(prevState => ({selectedFont: newFont}));
     }
@@ -29,6 +27,9 @@ class Input extends React.Component {
     }
     var changeColor = (newColor) => {
       this.setState(prevState => ({selectedColor: newColor}));
+    }
+    var style = {
+      fontSize: "15px"
     }
     return (
       <div 
@@ -41,7 +42,19 @@ class Input extends React.Component {
         }
       >
         <Menu 
-          changeTab={changeTab} 
+          tabs={
+            {
+              "General": "123", 
+              "Alphabet": "Abc", 
+              "Greek Letters": "π Ω", 
+              "Symbols": "4", 
+              "Formatting": <FormatAlignLeftIcon className="icon" style={style}/>
+            }
+          }
+          useIcons={this.props.useIcons}
+          changeTab={(newTab) => {
+            this.setState(prevState => ({selectedTab: newTab}));
+          }} 
           selectedTab={this.state.selectedTab}
         />
         <Toolbar 

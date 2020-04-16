@@ -6,16 +6,25 @@ import Tab from "./Tab";
 // ========================================
 
 class Menu extends React.Component {
-  tabs = ["General", "Alphabet", "Greek Letters", "Symbols", "Formatting"];
   render() {
     return (
       <div className="menu">
         {
-          this.tabs.map(title => 
+          this.props.useIcons ?
+          Object.entries(this.props.tabs).map(title => 
             <Tab 
-              title={title} 
-              selected={title === this.props.selectedTab ? true : false}
+              title={title[1]} 
+              selected={title[0] === this.props.selectedTab}
               changeTab={this.props.changeTab}
+              tabName={title[0]}
+            />
+          ):
+          Object.entries(this.props.tabs).map(title => 
+            <Tab 
+              title={title[0]} 
+              selected={title[0] === this.props.selectedTab}
+              changeTab={this.props.changeTab}
+              tabName={title[0]}
             />
           )
         }

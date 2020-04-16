@@ -1,10 +1,10 @@
 import React from 'react';
-import '../../index.css';
+import '../../../index.css';
 
 
 // ========================================
 
-class Alphabet_Display extends React.Component {
+class GreekLettersDisplay extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,23 +17,23 @@ class Alphabet_Display extends React.Component {
     }));
   }
   render() {
-    var lower_letters = "abcdefghijklmnopqrstuvwxyz".split("");
-    var upper_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    var lower_letters = "αβγδεζηθικλμνξπρςστυφχψω".split("");
+    var upper_letters = "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ".split("");
     return (
-      <div className="alphabet_display">
+      <div className="greekLetters_display">
         {
           this.state.shift ?
           upper_letters.map(letter =>
-            <button className="toolbar_button upperAlphabet_button">{letter}</button>
+            <button className="toolbar_button greekLetter_button">{letter}</button>
           ):
           lower_letters.map(letter => 
-            <button className="toolbar_button lowerAlphabet_button">{letter}</button>
+            <button className="toolbar_button greekLetter_button"><>{letter}</></button>
           )
         }
         <button 
         className="toolbar_button shift_button" 
         onClick={this.shift} 
-        style={{gridColumn: "6/8"}}
+        style={{gridColumn: "7/10"}}
         >
           Shift
         </button>
@@ -44,4 +44,4 @@ class Alphabet_Display extends React.Component {
 
 // ========================================
 
-export default Alphabet_Display;
+export default GreekLettersDisplay;

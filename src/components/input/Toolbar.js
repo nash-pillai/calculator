@@ -1,10 +1,10 @@
 import React from 'react';
-import '../index.css';
+import '../../index.css';
 
-import General from "./tabViews/General";
-import Alphabet from "./tabViews/Alphabet";
-import Greek_Letters from "./tabViews/Greek_Letters";
-import Formatting from "./tabViews/Formatting";
+import General from "./inputDisplays/General";
+import Alphabet from "./inputDisplays/Alphabet";
+import GreekLetters from "./inputDisplays/GreekLetters";
+import Formatting from "./inputDisplays/Formatting";
 
 // ========================================
 
@@ -16,7 +16,7 @@ class Toolbar extends React.Component {
         display = <Alphabet />;
         break;
       case "Greek Letters":
-        display = <Greek_Letters />;
+        display = <GreekLetters />;
         break;
       case "Symbols":
         display = <p>Coming Soon!</p>;

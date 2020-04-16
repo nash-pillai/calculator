@@ -1,9 +1,25 @@
+.calculator {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: auto auto;
+  grid-gap: 5px;
+}
+
+.ad {
+  background-color: red;
+}
+
 .tab {
   display: inline-block;
   padding: 2px 5px;
   margin: 5px 5px 0px;
   border-radius: 5px 5px 0px 0px;
 }
+
+.icon {
+  margin-bottom: -2px;
+}
+
 
 .toolbar {
   background-color: lightgray;
@@ -91,4 +107,15 @@
   background-color: lightgray;
   border-radius: 5px;
   padding: 7px;
+}
+
+
+
+
+.settings_display {
+  background-color: lightgray;
+  padding: 5px;
+  height: auto;
+  width: auto;
+  border-radius: 5px;
 }
